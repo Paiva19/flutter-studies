@@ -1,5 +1,4 @@
 import "package:equatable/equatable.dart";
-import 'package:meta/meta.dart';
 
 class NumberTrivia extends Equatable {
   final String text;
@@ -7,14 +6,13 @@ class NumberTrivia extends Equatable {
   final bool found;
   final String type;
 
-  NumberTrivia(this.text, this.number, this.found, this.type) {
-    this.text = text;
-    this.number = number;
-    this.found = found;
-    this.type = type;
-  }
+  NumberTrivia(
+    this.text,
+    this.number,
+    this.found,
+    this.type, 
+  );
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [text, number, found, type];
 }
